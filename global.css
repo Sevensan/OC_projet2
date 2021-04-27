@@ -1,0 +1,24 @@
+section{
+    margin: 2rem 0;
+}
+
+.gris{
+    color: var(--gris);
+}
+
+
+@media screen and (min-width:1024px){
+    .lg-flex{
+        display: flex;
+    }
+    .reverse{
+        flex-direction: row-reverse;
+    }
+    .lg-full-height{
+        height: 85% !important;
+    }
+
+    .lg-container{
+        margin: 0 2rem;
+    }
+}
