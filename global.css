@@ -21,4 +21,7 @@ section{
     .lg-container{
         margin: 0 2rem;
     }
+    .align-items-center{
+        align-items: center;
+    }
 }
