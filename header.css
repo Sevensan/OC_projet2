@@ -1,38 +1,44 @@
 
 /* HEADER */
 
-nav ul{
+nav {
     display: flex;
     justify-content: space-around;
+    grid-area: navigation;
 }
 
-header{
+.mobile{
     display: grid;
     grid-template-areas:
     "logo inscrire"
-    "hebergements activites";
+    "navigation navigation";
     justify-content: space-between;
+}
+.desktop{
+    display: none;
 }
 
 .logo{
     grid-area: logo;
 }
-header #login{
+.mobile #login{
     grid-area: inscrire;
     align-items: center;
     display: flex;
     justify-content: flex-end;
     color: var(--bleu);
-    font-size: 20px;
     font-weight:bolder;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
-#hebergements{
+.mobile #hebergements{
     grid-area: hebergements;
 }
-#activites{
+.mobile #activites{
     grid-area: activites;
 }
-#hebergements, #activites{
+.mobile #hebergements, #activites{
     border-bottom: 3px solid var(--gris);
     width: 50vw;
     text-align: center;
@@ -42,35 +48,39 @@ header #login{
     border-bottom: 3px solid var(--bleu);
     color: var(--bleu) !important;
 }
-.logo, #login, #hebergements p, #activites p{
+.logo, .mobile #hebergements p, .mobile #activites p{
     padding-bottom: 1rem;
 }
 .logo{
     padding-left: 1rem;
-}
-#login{
-    padding-right: 2rem;
-}
-.logo, #login{
     padding-top: 1rem;
 }
 
 @media screen and (min-width:1024px){
-    header{
-        grid-template-areas:
-        "logo vide hebergements activites inscrire";
+    .mobile{
+        display: none;
     }
-    #hebergements, #activites{
+    .desktop{
+        display: flex;
+        justify-content: space-between;
+    }
+    .desktop #hebergements, .desktop #activites{
         border-top: 3px solid var(--gris);
         border-bottom: none;
         width: 100%;
-        padding-top: 2rem;
+        padding: 2rem 2rem 0 2rem;
+        color: black;
+        font-weight: 500;
     }
-    #hebergements:active, #activites:active{
+    .desktop #hebergements:active, .desktop #activites:active, .desktop #login:active{
         border-top: 3px solid var(--bleu);
         border-bottom: none;
     }
-    #login{
-        margin-right: 2rem;
+    .desktop #login{
+        padding: 2rem 2rem 0 2rem;
+        color: var(--bleu);
+        font-weight:bolder;
+        border-top: 3px solid white;
+        justify-self: flex-end;
     }
 }

@@ -17,6 +17,12 @@ footer p, footer li{
 @media screen and (min-width:1024px){
     footer{
         display: flex;
-        justify-content: space-around;
+        justify-content: start;
+    }
+    .footerMenu{
+        margin: 0 7rem;
+    }
+    .footerMenu:first-child{
+        margin-left: 0;
     }
 }

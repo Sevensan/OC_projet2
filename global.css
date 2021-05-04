@@ -6,6 +6,12 @@ section{
     color: var(--gris);
 }
 
+@media screen and (min-width:768px) {
+    .lg-full-height{
+        height: 85% !important;
+    }
+}
+
 
 @media screen and (min-width:1024px){
     .lg-flex{
@@ -14,10 +20,6 @@ section{
     .reverse{
         flex-direction: row-reverse;
     }
-    .lg-full-height{
-        height: 85% !important;
-    }
-
     .lg-container{
         margin: 0 2rem;
     }

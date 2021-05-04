@@ -36,7 +36,7 @@
 .searchbar input{
     width: 100%;
     border: 2px solid var(--gris);
-    padding: 1.5rem 0 1.5rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     border-radius: 0 20px 20px 0;
 }
 .searchbar input::placeholder{
@@ -59,10 +59,12 @@
         background-color: var(--bleu);
         border-radius: 0 20px 20px 0;
         position: absolute;
-        right: 0;
+        left: 85%;
+        padding: 0 1.5rem;
         height: 100%;
         width: 7rem;
         color: white;
+        font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;

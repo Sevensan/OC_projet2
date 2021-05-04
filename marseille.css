@@ -25,11 +25,22 @@
 .marseilleActivites img{
     height: 10rem;
 }
+@media screen and (min-width:768px) {
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .marseille .titre{
+        padding: 2rem 1rem;
+    }
 
+    .marseilleActivites{
+        display: flex;
+    }
+}
 
 @media screen and (min-width:1024px){
     .cards{
-        display: grid;
         grid-template-columns: repeat(3,1fr);
     }
     .marseille{
@@ -41,15 +52,5 @@
     .populaire{
         border-radius: 20px;
         width: 40vw;
-    }
-    .marseille, .populaire{
-        margin: .5rem;
-    }
-    .marseille .titre{
-        padding: 2rem 1rem;
-    }
-
-    .marseilleActivites{
-        display: flex;
     }
 }
