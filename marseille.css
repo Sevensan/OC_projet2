@@ -49,6 +49,9 @@
         width: 60vw;
         height: 100%;
     }
+    .marseille .titreRow .titre{
+        padding: 0 0 0 1rem;
+    }
     .populaire{
         border-radius: 20px;
         width: 40vw;
