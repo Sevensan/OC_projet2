@@ -16,9 +16,14 @@
     display: flex;
     margin: .5rem;
     align-items: center;
+    transition: all .5s;
+}
+.filtre:hover{
+    background-color: var(--bleu);
+    color: white;
 }
 .filtres .fas{
-    border-radius: 50%;
+    border-radius: 45%;
     background-color: var(--bleuClair);
     padding:1rem;
     color: var(--bleu);
