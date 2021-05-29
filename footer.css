@@ -20,7 +20,7 @@ footer p, footer li{
         justify-content: start;
     }
     .footerMenu{
-        margin: 0 9rem;
+        margin: 0 12rem;
     }
     .footerMenu:first-child{
         margin-left: 0;
