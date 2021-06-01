@@ -7,21 +7,18 @@ nav {
     grid-area: navigation;
 }
 
-.mobile{
+.header{
     display: grid;
     grid-template-areas:
     "logo inscrire"
     "navigation navigation";
     justify-content: space-between;
 }
-.desktop{
-    display: none;
-}
 
 .logo{
     grid-area: logo;
 }
-.mobile #login{
+#login{
     grid-area: inscrire;
     align-items: center;
     display: flex;
@@ -32,13 +29,13 @@ nav {
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-.mobile #hebergements{
+#hebergements{
     grid-area: hebergements;
 }
-.mobile #activites{
+#activites{
     grid-area: activites;
 }
-.mobile #hebergements, #activites{
+#hebergements, #activites{
     border-bottom: 3px solid var(--gris);
     width: 50vw;
     text-align: center;
@@ -48,7 +45,7 @@ nav {
     border-bottom: 3px solid var(--bleu);
     color: var(--bleu) !important;
 }
-.logo, .mobile #hebergements p, .mobile #activites p{
+.logo, #hebergements p, #activites p{
     padding-bottom: 1rem;
 }
 .logo{
@@ -57,14 +54,12 @@ nav {
 }
 
 @media screen and (min-width:1024px){
-    .mobile{
-        display: none;
-    }
-    .desktop{
+    .header{
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
     }
-    .desktop #hebergements-desktop, .desktop #activites-desktop{
+
+    #hebergements, #activites{
         border-top: 3px solid var(--gris);
         border-bottom: none;
         width: 100%;
@@ -72,15 +67,17 @@ nav {
         color: black;
         font-weight: 500;
     }
-    .desktop #hebergements-desktop:active, .desktop #activites-desktop:active, .desktop #login-desktop:active{
-        border-top: 3px solid var(--bleu);
-        border-bottom: none;
-    }
-    .desktop #login-desktop{
+    #login{
         padding: 2rem 2rem 0 2rem;
         color: var(--bleu);
         font-weight:bolder;
         border-top: 3px solid white;
         justify-self: flex-end;
+    }
+    nav{
+        position: absolute;
+        top: 0;
+        display: flex;
+        right: 10%;
     }
 }
